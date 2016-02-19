@@ -9,7 +9,7 @@
 composer install
 ```
 
-### For fill `some-company.json`
+##### For fill `some-company.json`
 ```bash
 php bin/console scp:scrap:page
 ```
@@ -19,6 +19,6 @@ php bin/console scp:scrap:page
 php bin/console server:start
 ```
 
-### Go to `/pages/company/?company=Some&json=some-company.json`
+##### Go to `/pages/company/?company=Some&json=some-company.json`
 
-### Also can run_tests.sh
+##### Also can run_tests.sh
