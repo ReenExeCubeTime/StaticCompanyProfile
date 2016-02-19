@@ -1,0 +1,14 @@
+services:
+  scp.keyvalue.storage:
+    class: AppBundle\Service\Storage\FileSystemStorage
+    arguments:
+      - "%kernel.root_dir%/../storage/"
+
+  scp.company.page.parser:
+    class: AppBundle\Service\CompanyPageParser
+
+  scp.scrapper:
+    class: AppBundle\Service\Scrap\Scraper
+    arguments:
+      - '@scp.company.page.parser'
+      - '@scp.keyvalue.storage'

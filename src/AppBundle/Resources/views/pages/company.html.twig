@@ -1,0 +1,22 @@
+{# @var content array #}
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div id="company">{{- company -}}</div>
+    <div>
+        <ul>
+            {% for employee in content.employees %}
+                <li>
+                    {{ employee.name }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        {% for fact in content.facts %}
+            <li>
+                <span>{{ fact.title }}</span>
+                <span>{{ fact.text }}</span>
+            </li>
+        {% endfor %}
+    </div>
+{% endblock %}
